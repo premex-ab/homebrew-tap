@@ -5,23 +5,21 @@
 class AdbConnect < Formula
   desc "Connect adb to an Android phone over same-LAN Wi-Fi or Tailscale"
   homepage "https://github.com/premex-ab/adb-connect"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
-
-  depends_on "android-platform-tools" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.1/adb-connect_0.1.1_darwin_amd64.tar.gz"
-      sha256 "e98baf5e60aa29a05b2ee224ccbe56b0d3048a3a88a461e1eccfdc8293b2838e"
+      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.2/adb-connect_0.1.2_darwin_amd64.tar.gz"
+      sha256 "42164c69d61332b5afaccbb0baee0a6472b61ef65d50baa82e88dfd4215fc86a"
 
       define_method(:install) do
         bin.install "adb-connect"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.1/adb-connect_0.1.1_darwin_arm64.tar.gz"
-      sha256 "9aef24a1472f06a34838eda09de65bcfc0702638ba6a40cc3237ab7b40185c39"
+      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.2/adb-connect_0.1.2_darwin_arm64.tar.gz"
+      sha256 "6e9d352f3fbcc18bb0f42223dff84662798586dfe43f733613ada519d4daed73"
 
       define_method(:install) do
         bin.install "adb-connect"
@@ -31,15 +29,15 @@ class AdbConnect < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.1/adb-connect_0.1.1_linux_amd64.tar.gz"
-      sha256 "d7ee815f9d3f4bf006821b1b1697ebeb9e0fab8a16c9eaf030abea00438cd192"
+      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.2/adb-connect_0.1.2_linux_amd64.tar.gz"
+      sha256 "8c7e5a5c63afbd3b85bc926922b236072646929bc097e22032f6a67d936596d0"
       define_method(:install) do
         bin.install "adb-connect"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.1/adb-connect_0.1.1_linux_arm64.tar.gz"
-      sha256 "4fac2c3685f69eb4982a775d7518a7f987c13f3d14b9742a8f69cf44dcb5c83f"
+      url "https://github.com/premex-ab/adb-connect/releases/download/v0.1.2/adb-connect_0.1.2_linux_arm64.tar.gz"
+      sha256 "67b5eba6f1c4009c0fd3406d3d372f7de31d831ec709ec66009edec86b4c7d19"
       define_method(:install) do
         bin.install "adb-connect"
       end
